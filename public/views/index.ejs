@@ -1,0 +1,225 @@
+<html>
+		<head>
+			<link href='scripts/styles/styles2.css' rel="stylesheet">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+			<!-- FONTS/ICONS-->
+			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+			<link rel="preconnect" href="https://fonts.gstatic.com">
+			<link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+
+			<style>
+				body{
+					background: linear-gradient(to bottom, #0000ff 0%, #cc00ff 100%);
+				}
+
+								.white{
+				color: white;
+				}
+				.sidenav {
+					width: 200px;
+					position: fixed;
+					z-index: 1;
+					top: 20px;
+					left: 10px;
+					background: #cc33ff;
+					overflow-x: hidden;
+					padding: 8px 0;
+					flex-shrink: 0;
+					border: 2px solid white;
+				}
+				
+				.sidenav a {
+					padding: 6px 8px 6px 16px;
+					text-decoration: none;
+					font-size: 25px;
+					color: #0000ff;
+					display: block;
+					flex-shrink: 0;
+				}
+				
+				.sidenav a:hover {
+					color: hotpink;
+				}
+				
+				.yeah a:hover {
+					color: hotpink;
+				}
+
+				.footer {
+					position: fixed;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					height: 35px;
+					background-color: red;
+					color: white;
+					text-align: center;
+				}
+
+				.names{
+					position: relative;
+					top: -10px;
+					font-size: 20px;
+				}
+
+				.body-ody{
+					display: flex;
+				}
+
+				.space{
+					width: 150px;
+					height: 600px;
+					position: relative;
+					
+					transition: width 0.2s;
+					flex-shrink: 0;
+					justify-content: space-evenly;
+				}
+
+				.space2{
+					width: 215px;
+					height: 300px;
+					position: relative;
+					
+					transition: width 0.2s;
+					flex-shrink: 0;
+					justify-content: space-evenly;
+				}
+				
+				.main {
+					margin-left: 80px; /* Same width as the sidebar + left position in px */
+					font-size: 28px; /* Increased text to enable scrolling */
+					padding: 0px 10px;
+					display: flex;
+					flex-shrink: 0;
+				}
+				
+				@media screen and (max-height: 450px) {
+					.sidenav {padding-top: 15px;}
+					.sidenav a {font-size: 18px;}
+				}
+
+				.title{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				
+				.click-button{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				.center{
+					position:fixed; 
+					text-align: center;
+					top:350px;
+					left: 500px;
+				}
+
+				.login{
+					width: 200px;
+					height: 150px;
+					background-color: #cc33ff;
+					flex-shrink: 0;
+					border: 2px solid white;
+					
+				}
+
+				.game-description{
+					width: 200px;
+					height: 700px;
+					background-color: #cc33ff;
+					flex-shrink: 0;
+					border: 2px solid white;
+					text-align: center;
+					align-content: center;
+					padding-right: 20px;
+					
+				}
+
+				.words{
+					align-self: center;
+					align-self: flex-end;
+					}
+				
+				
+				/* text/font stuff*/
+				.title{
+					font-size: 200%;
+				}
+				
+				.krona{
+					font-family: 'Krona One', sans-serif;
+				}
+				
+				.tegomin{
+					font-family: 'New Tegomin', serif;
+				}
+			</style>
+		</head>
+	
+		<body>
+
+			<div class="body-ody">
+				<div class="sidenav">
+					<h1 class="white tegomin">If You're Bored...</h1>
+					<hr>
+					<a href='/gamePage'>
+						  <i class="material-icons">videogame_asset</i>
+						<span>GamePage</span>
+					</a>
+					<a href='/gallery'>
+						<i class="material-icons">grid_view</i>
+					  <span>Game Gallery</span>
+					 </a>
+					<a href='/myaccount'>
+						<i class="material-icons">account_circle</i>
+						  <span>My Account</span>
+					</a>
+					<a href='/login'>
+						<i class="material-icons">login</i>
+						  <span>Logout</span>
+					  </a>
+					
+				</div>
+				<div class="space">
+	
+				</div>
+				
+				<div class="main">
+					<div class="words">
+						<div class="title tegomin white">
+							<h1>If You're Bored...</h1>
+						</div>
+					
+						<div class="click-button white">
+							<center><h2 class="krona">Click For a Random Game!</h2>
+								<a href='/gamePage'>
+					
+									<img src="public/assets/buttonNotPushed.png" onclick="this.src='public/assets/buttonPushed.png'" width="100" height="100">
+								</a>
+							</center>
+						</div>
+					</div>
+					<div class="login">
+						<form action = "/logout" method = "POST" > 
+							<a class="yeah" href='/login' type = "submit" > Logout </a> 
+						</form> 
+						<a class="yeah" href = '/register' > Register </a> 
+					</div>
+				</div>  
+			</div>
+			<div class="footer">
+				<p class="names">Created By: Courtney Harris, Mallory Mullins, & Nicholas Arruebarrena</p>
+			</div>
+	
+			<!-- connect html to js files -->
+			<script src="scripts/Logic.js"></script>
+			<script src="scripts/View.js"></script>
+			<script src="scripts/Controllers.js"></script>
+			<script src="scripts/sidebar.js"></script>
+		</body>
+	</html>

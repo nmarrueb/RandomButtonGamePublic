@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link href='styles/styles2.css' rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div class="body-ody">
+            <div class="sidenav tegomin">
+                <h1 class="white">If You're Bored...</h1>
+                <hr>
+                <a href='index.html'>
+					<i class="material-icons">home</i>
+				  	<span>Home</span>
+			  	</a>
+                <a href='gallery.html'>
+                    <i class="material-icons">grid_view</i>
+                  <span>Game Gallery</span>
+                 </a>
+                <a href='login.html'>
+                    <i class="material-icons">account_circle</i>
+                      <span>My Account</span>
+                </a>
+                <a href='login.html'>
+                    <i class="material-icons">login</i>
+                      <span>Logout</span>
+                  </a>
+            </div>
+            <div class="space2">
+
+			</div>
+		
+			<div class="words white">
+				<!-- view display -->    
+                <center><iframe src="https://js13kgames.com/games/play-back/index.html" id="srcLink" width="1000" height="700"></iframe></center>
+
+                <center><img src="assets/buttonNotPushed.png" onclick="this.src='assets/buttonPushed.png'" id="randomGame" width="100" height="100"></center>
+			</div>
+
+            <div class="krona white">
+                <center>
+                    <div class="game-description tegomin" id="game-description">
+                    
+                    </div>
+                </center> 
+            </div>
+        </div>
+
+        <!-- connect html to js files -->
+		<script src="scripts/Logic.js"></script>
+        <script src="scripts/View.js"></script>
+        <script src="scripts/Controllers.js"></script>
+    </body>
+</html>

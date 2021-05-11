@@ -1,0 +1,407 @@
+<html>
+    <head>
+		<link href='styles/gstyles.css' rel="stylesheet">
+        <link href='styles/styles2.css' rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+		<style>
+			.button1{
+				background-color: #3e8e41;
+				border: none;
+				color: white; 
+				border-radius: 4px;
+				transition-duration: 0.4;
+				padding: 32px 20px;
+				cursor: pointer;
+
+			}
+
+			.button1:hover{
+				background-color: #f44336;;
+				color: white;
+			}
+			.button1:active {
+			background-color: #3e8e41;
+			box-shadow: 0 5px #666;
+			transform: translateY(4px);
+			}
+
+			/* The grid: Four equal columns that floats next to each other */
+			.column {
+			float: left;
+			width: 25%;
+			padding: 10px;
+			}
+
+			/* Style the images inside the grid */
+			.column img {
+			opacity: 0.8;
+			cursor: pointer;
+			}
+
+			.column img:hover {
+			opacity: 1;
+			}
+
+			/* Clear floats after the columns */
+			.row:after {
+			content: "";
+			display: table;
+			clear: both;
+			}
+
+			/* The expanding image container (positioning is needed to position the close button and the text) */
+			.container {
+			position: fixed;
+			margin-left: 1200px;
+			margin-top: 70px;
+			}
+
+			/* Expanding image text */
+			#imgtext {
+			position: static;
+			bottom: 15px;
+			left: 15px;
+			color: white;
+			font-size: 20px;
+			}
+
+			/* Closable button inside the image */
+			.closebtn {
+			position: absolute;
+			top: 10px;
+			right: 15px;
+			color: white;
+			font-size: 35px;
+			cursor: pointer;
+			}
+
+			.text-block {
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			background-color: black;
+			color: white;
+			padding-left: 20px;
+			padding-right: 20px;
+			}
+
+			table {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 10%;
+				
+			}
+
+			td {
+				vertical-align:center;
+				
+			}
+
+			h1 {
+				color: white;
+			}
+			body{
+                background: linear-gradient(to bottom, #0000ff 0%, #cc00ff 100%);
+            }
+
+                            .white{
+            color: white;
+            }
+            .sidenav {
+                width: 200px;
+                position: fixed;
+                z-index: 1;
+                top: 20px;
+                left: 10px;
+                background: #cc33ff;
+                overflow-x: hidden;
+                padding: 8px 0;
+                flex-shrink: 0;
+                border: 2px solid white;
+            }
+            
+            .sidenav a {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #0000ff;
+                display: block;
+                flex-shrink: 0;
+            }
+            
+            .sidenav a:hover {
+                color: hotpink;
+            }
+            
+
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 35px;
+                background-color: red;
+                color: white;
+                text-align: center;
+            }
+
+            .names{
+                position: relative;
+                top: -10px;
+                font-size: 20px;
+            }
+
+            .body-ody{
+                display: flex;
+            }
+
+            .space{
+                width: 150px;
+                height: 600px;
+                position: relative;
+                
+                transition: width 0.2s;
+                flex-shrink: 0;
+                justify-content: space-evenly;
+            }
+
+            .space2{
+                width: 215px;
+                height: 300px;
+                position: relative;
+                
+                transition: width 0.2s;
+                flex-shrink: 0;
+                justify-content: space-evenly;
+            }
+            
+            .main {
+                margin-left: 80px; /* Same width as the sidebar + left position in px */
+                font-size: 28px; /* Increased text to enable scrolling */
+                padding: 0px 10px;
+                display: flex;
+                flex-shrink: 0;
+            }
+            
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+            }
+
+            .title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .click-button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .center{
+                position:fixed; 
+                text-align: center;
+                top:350px;
+                left: 500px;
+            }
+
+            .login{
+                width: 200px;
+                height: 150px;
+                background-color: #cc33ff;
+                flex-shrink: 0;
+                border: 2px solid white;
+                
+            }
+
+            .game-description{
+                width: 200px;
+                height: 700px;
+                background-color: #cc33ff;
+                flex-shrink: 0;
+                border: 2px solid white;
+                text-align: center;
+                align-content: center;
+                padding-right: 20px;
+                
+            }
+
+            .words{
+                align-self: center;
+                align-self: flex-end;
+                }
+            
+            
+            /* text/font stuff*/
+            .title{
+                font-size: 200%;
+            }
+            
+            .krona{
+                font-family: 'Krona One', sans-serif;
+            }
+            
+            .tegomin{
+                font-family: 'New Tegomin', serif;
+            }
+		</style>
+    </head>
+    <body>
+        <div class="body-ody">
+            <div class="sidenav">
+                <h1 class="white tegomin">If You're Bored...</h1>
+                <hr>
+                <a href='/index'>
+					<i class="material-icons">home</i>
+				  	<span>Home</span>
+			  	</a>
+                <a href='/gamePage'>
+					<i class="material-icons">videogame_asset</i>
+				  	<span>GamePage</span>
+			  	</a>
+				  <a href='/myaccount'>
+					<i class="material-icons">account_circle</i>
+					  <span>My Account</span>
+				</a>
+				<a href='/login'>
+					<i class="material-icons">login</i>
+					  <span>Logout</span>
+				  </a>
+            </div>
+			
+			
+			<div><table>
+		<tr>
+			<th><div style="text-align:center">
+			<h1 style="text-align:center">Game Gallery</h1>
+			</div></th>
+		</tr>
+		
+		<tr>
+			<td> <img src="public\assets\pizza_game.png" width="200" height="111" alt=" Category: Arcade<br> Game: Pizza Undelivery<br> Creator: Nils Gawlik<br>  Game Link: https://js13kgames.com/games/pizza-undelivery/index.html" onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\planetfall.png" width="200" height="111" alt="Category: Adventure<br> Game: Planetfall<br> Creator: Cheng Chiao<br> Game Link: https://github.com/chiaogu/planetfall" onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\racer.png"  width="200" height="111" alt="Category: Arcade<br> Game: Racer<br> Creator: James<br> Game Link: https://github.com/jaammees/racer" onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\dwarf.png" width="200" height="111" alt="Category: Adventure<br> Game: Dwarfs: There and Back Again<br> Creator: mvasilkov<br> Game Link: https://github.com/mvasilkov/dwarfs2019 <br>" onclick="myFunction(this);"> </td>
+		</tr>
+		<tr>
+			<td> <img src="public\assets\bback.jpg" width="200" height="111" alt="Category: Adventure<br> Game: Bounce Back<br> Creator: Frank Force<br> Game Link: https://github.com/KilledByAPixel/BounceBack<br> " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\wander.png" width="200" height="111" alt="Category: Adventure<br> Game: Wander<br> Creator: RAZH<br> Game Link: https://github.com/razh/js13k-2018 " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\triangle.png"  width="200" height="111" alt="Category: Adventure<br> Game: Triangle: Back to Home<br> Creator: Viktor Uhryn<br> Game Link: https://github.com/vik-13/back-to-home " onclick="myFunction(this);"></td>
+			<td> <img src="public\assets\tod.png" width="200" height="111" alt="Category: Adventure<br> Game: Quest of Tod<br> Creator: SAMIRH<br> Game Link: https://github.com/SamirHodzic/js13k18-quest-of-tod " onclick="myFunction(this);"> </td>
+		</tr>
+		
+		<tr>
+			<td> <img src="public\assets\evilglitch.png" width="200" height="111" alt="Category: Arcade<br> Game: Evil Glitch<br> Creator: AGAR3S<br> Game Link: https://github.com/agar3s/devil-glitches " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\ofparadise.png" width="200" height="111" alt="Category: Adventure<br> Game: Offline Paradise<br> Creator: SIRXEMIC<br> Game Link: https://github.com/sirxemic/js13k-game " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\everyonesky.png"  width="200" height="111" alt="Category: Arcade<br> Game:Everyone's Sky<br> Creator: Remi Vansteelandt<br> Game Link: https://github.com/remvst/everyones-sky" onclick="myFunction(this);"></td>
+			<td> <img src="public\assets\offtheline.png" width="200" height="111" alt="Category: Arcade<br> Game: Off The Line<br> Creator: Bryan Perfetto<br> Game Link: https://github.com/regularkid/offtheline " onclick="myFunction(this);"> </td>
+		</tr>
+		
+		<tr>
+			<td> <img src="public\assets\pcw.png" width="200" height="111" alt="Category: Arcade<br> Game: Pest Control: Weasels<br> Creator:SIORKI<br> Game Link: https://github.com/Siorki/js13kgames/tree/master/2014%20-%20weasels" onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\asteroids.png" width="200" height="111" alt="Category: Adventure<br> Game: Behind Asteroids - The Dark Side<br> Creator:GREWEB<br> Game Link: https://github.com/gre/behind-asteroids " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\jumpnbump.png"  width="200" height="111" alt="Category: Arcade<br> Game: Jump N Bump<br> Creator: GrahamTheCoder<br> Game Link: https://github.com/ennorehling/jump-n-bump " onclick="myFunction(this);"></td>
+			<td> <img src="public\assets\pixelart.png" width="200" height="111" alt="Category: Education<br> Game: Pixel Art Academy<br> Creator: Matej Jan<br> Game Link: https://github.com/Retronator/Pixel-Art-Academy " onclick="myFunction(this);"> </td>
+		</tr>
+		
+		<tr>
+			<td> <img src="public\assets\nanowirebot.png" width="200" height="111" alt="Category: Platformer<br> Game: Nano-Wirebot<br> Creator: Mariano Lambir<br> Game Link: https://github.com/mlambir/js13k-2019-back " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\wraith.png" width="200" height="111" alt="Category: Platformer<br> Game: The Wandering Wraith<br> Creator: Mateusz Tomczyk<br> Game Link: https://github.com/tulustul/The-Wandering-Wraith " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\onoff.png"  width="200" height="111" alt="Category: Platformer<br> Game: OnOff<br> Creator: Bran Dunino<br> Game Link: https://github.com/starzonmyarmz/js13k-2018 " onclick="myFunction(this);"></td>
+			<td> <img src="public\assets\matr13k.png" width="200" height="111" alt="Category: Platformer<br> Game: The Matr13k<br> Creator: Agar3s<br> Game Link: https://github.com/agar3s/js13k2018/ " onclick="myFunction(this);"> </td>
+		</tr>
+		
+		<tr>
+			<td> <img src="public\assets\glitchbuster.png" width="200" height="111" alt="Category: Platformer<br> Game: Glitch Buster<br> Creator: Remi Vansteelandt<br> Game Link: https://github.com/remvst/glitchbuster " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\vier.png" width="200" height="111" alt="Category: Platformer<br> Game: Vier<br> Creator: Agares<br> Game Link: http://github.com/agar3s/vier " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\wayout.png"  width="200" height="111" alt="Category: Platformer<br> Game: Way Out<br> Creator: SamirH<br> Game Link: https://github.com/SamirHodzic/js13k19-way-out" onclick="myFunction(this);"></td>
+			<td> <img src="public\assets\playback.png" width="200" height="111" alt="Category: Puzzle<br> Game: Play Back<br> Creator: MADMAW<br> Game Link: https://github.com/madmaw/playback" onclick="myFunction(this);"> </td>
+		</tr>
+		
+		<tr>
+			<td> <img src="public\assets\backatt.png" width="200" height="111" alt="Category: Pizzle<br> Game: Back Attacker<br> Creator: Yeon Juan Game Link: https://github.com/yeonjuan/js13k-2019-back " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\xx142b2.png" width="200" height="111" alt="Category: Puzzle<br> Game: xx142-B2.exe<br> Creator: Beb & Salvatore<br> Game Link: https://github.com/bencoder/js13k-2019  " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\1024.png"  width="200" height="111" alt="Category: Puzzle<br> Game: 1024 Moves<br> Creator: Greg Peck<br> Game Link: https://github.com/GregPeck/1024-moves " onclick="myFunction(this);"></td>
+			<td> <img src="public\assets\rewire.png" width="200" height="111" alt="Category: Puzzle<br> Game: Re-Wire<br> Creator: Jan Mankopf<br> Game Link: https://github.com/JMankopf/js13k-rewire" onclick="myFunction(this);"> </td>
+		</tr>
+		
+		<tr>
+			<td> <img src="public\assets\envisionator.png" width="200" height="111" alt="Category: Puzzle<br> Game: Envisionator<br> Creator: Donitz<br> Game Link: https://github.com/DennisBengs/envisionator/ " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\enmeshed.png" width="200" height="111" alt="Category: Puzzle<br> Game: Enmeshed<br> Creator: Mark Barr<br> Game Link: https://github.com/mdbarr/enmeshed " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\planetfig.png"  width="200" height="111" alt="Category: Puzzle<br> Game: Planet Figadore<br> Creator: PICOSONIC<br> Game Link: https://github.com/picosonic/js13k-2018" onclick="myFunction(this);"></td>
+			<td> <img src="public\assets\raven.png" width="200" height="111" alt="Category: Puzzle<br> Game: Raven<br> Creator: Elliot Nelson<br> Game Link: https://github.com/elliot-nelson/js13k-2018-raven" onclick="myFunction(this);"> </td>
+		</tr>
+		
+		<tr>
+			<td> <img src="public\assets\2048.png" width="200" height="111" alt="Category: Puzzle<br> Game: 2048<br> Creator: 4ark<br> Game Link: https://github.com/gd4Ark/2048 " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\losttreasure.png" width="200" height="111" alt="Category: Puzzle<br> Game: Lost Treasure<br> Creator: Samirh<br> Game Link: https://github.com/SamirHodzic/js13k17-lost-treasure " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\oect.png"  width="200" height="111" alt="Category: Running<br> Game: O. E. C. T.<br> Creator: Ben Fox<br> Game Link: https://github.com/BenjaminWFox/offline-oect-js13k " onclick="myFunction(this);"></td>
+			<td> <img src="public\assets\swagshot.png" width="200" height="111" alt="Category: Shooter<br> Game: SWAGSHOT<br> Creator: Remi Vansteelandt<br> Game Link: https://github.com/remvst/swagshot " onclick="myFunction(this);"> </td>
+		</tr>
+		
+		<tr>
+			<td> <img src="public\assets\chroma.png" width="200" height="111" alt="Category: Shooter<br> Game: The Chroma Incident<br> Creator: Ryan Malm<br> Game Link: http://github.com/Rybar/js13k2018/ " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\underrun.png" width="200" height="111" alt="Category: Shooter<br> Game: UnderRun<br> Creator: PhobosLab<br> Game Link: https://github.com/phoboslab/underrun " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\backcountry.png"  width="200" height="111" alt="Category: Shooter<br> Game: BackCountry<br> Creator: Piesku<br> Game Link: https://github.com/piesku/backcountry " onclick="myFunction(this);"></td>
+			<td> <img src="public\assets\elematter.png" width="200" height="111" alt="Category: Strategy<br> Game: Elematter<br> Creator: Jack Rugile<br> Game Link: https://github.com/jackrugile/elematter-js13k " onclick="myFunction(this);"> </td>
+		</tr>
+		
+		<tr>
+			<td> <img src="public\assets\scroll.png" width="200" height="111" alt="Category: WebComponents<br> Game: Scroll<br> Creator: ZeevKatz<br> Game Link: https://github.com/ZeevKatz/scroll " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\pushback.png" width="200" height="111" alt="Category: Misc<br> Game: Push Back<br> Creator: Lomateron<br> Game Link: https://github.com/ErikSom/js13k-pushback " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\retrohaunt.png"  width="200" height="111" alt="Category: Misc<br> Game: RetroHaunt<br> Creator: Donitz<br> Game Link: https://github.com/DennisBengs/retrohaunt " onclick="myFunction(this);"></td>
+			<td> <img src="public\assets\spacecraft.png" width="200" height="111" alt="Category: Misc<br> Game: SPACECRAFT<br> Creator: Csaba Csecskedi<br> Game Link: https://github.com/tricsi/spacecraft " onclick="myFunction(this);"> </td>
+		</tr>
+		
+		<tr>
+			<td> <img src="public\assets\lostrobot.png" width="200" height="111" alt="Category: Misc<br> Game: Lost Robot<br> Creator: Dennis Meckel<br> Game Link: https://github.com/Rayne/js13k-lost-robot " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\exo.png" width="200" height="111" alt="Category: Misc<br> Game: EXO<br> Creator: Jack Oatley & AI Doge<br> Game Link: https://github.com/scorp200/td13k" onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\warship.png"  width="200" height="111" alt="Category: Misc<br> Game: Submersible Warship 2063<br> Creator: Jerome Lecomte<br> Game Link: https://github.com/herebefrogs/submersible-warship-2063 " onclick="myFunction(this);"></td>
+			<td> <img src="public\assets\sunshine.png" width="200" height="111" alt="Category: Misc<br> Game: Enjoy The Sunshine<br> Creator: EOINMCG<br> Game Link: https://github.com/eoinmcg/enjoythesunshine " onclick="myFunction(this);"> </td>
+		</tr>
+		
+		<tr>
+			<td> <img src="public\assets\flip.png" width="200" height="111" alt="Category: Misc<br> Game: OH, FLIP!<br> Creator: Bryan Perfetto<br> Game Link: https://github.com/regularkid/ohflip " onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\unogame.png" width="200" height="111" alt="Category: Misc<br> Game: UNO<br> Creator: Guilher Mebkel<br> Game Link: https://github.com/guilhermebkel/uno-game" onclick="myFunction(this);"> </td>
+			<td> <img src="public\assets\memgame.png" width="200" height="111" alt="Category: Misc<br> Game: Memory Game<br> Creator: Lucas-C<br> Game Link: https://github.com/Lucas-C/MemoryGame.js " onclick="myFunction(this);"> </td>
+		</tr>
+	
+			</table></div>
+			
+			
+			
+			<!-- The expanding image container -->
+			<div class="container">
+				<!-- Close the image -->
+				<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+				<!-- Expanded image -->
+				<img id="expandedImg" style="width:50%">
+
+				<!-- Image text -->
+				<div id="imgtext"></div>
+			</div>
+			
+			
+
+        <!-- connect html to js files -->
+		<script src="scripts/Logic.js"></script>
+        <script src="scripts/View.js"></script>
+        <script src="scripts/Controllers.js"></script>
+		
+		<script>
+		function myFunction(imgs) {
+			var expandImg = document.getElementById("expandedImg");
+			var imgText = document.getElementById("imgtext");
+			expandImg.src = imgs.src;
+			imgText.innerHTML = imgs.alt;
+			expandImg.parentElement.style.display = "block";
+		}
+		</script>
+    </body>
+</html>

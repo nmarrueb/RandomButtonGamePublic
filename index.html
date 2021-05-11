@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <link href='styles/styles2.css' rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- FONTS/ICONS-->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="body-ody">
+            <div class="sidenav">
+                <h1 class="white tegomin">If You're Bored...</h1>
+                <hr>
+                <a href="gamePage.html">
+					  <i class="material-icons">videogame_asset</i>
+					<span>GamePage</span>
+				</a>
+                <a href="gallery.html">
+					<i class="material-icons">grid_view</i>
+				  <span>Game Gallery</span>
+			 	</a>
+			  	<a href="#">
+					<i class="material-icons">account_circle</i>
+			  		<span>My Account</span>
+		  		</a>
+				<a href="login.html">
+					<i class="material-icons">login</i>
+				  	<span>Login</span>
+			  	</a>
+                
+            </div>
+            <div class="space">
+
+			</div>
+            
+            <div class="main">
+                <div class="words">
+                    <div class="title tegomin white">
+                        <h1>If You're Bored...</h1>
+                    </div>
+                
+                    <div class="click-button white">
+                        <center><h2 class="krona">Click For a Random Game!</h2>
+                            <a href="gamePage.html">
+                
+                                <img src="assets/buttonNotPushed.png" onclick="this.src='assets/buttonPushed.png'" width="100" height="100">
+                            </a>
+                        </center>
+                    </div>
+                </div>
+                <div class="login">
+                    <a href='login.html'> Login </a> 
+
+                    <p><a href='login.html'> Register </a> </p>
+                </div>
+            </div>  
+        </div>
+		<div class="footer">
+			<p class="names">Created By: Courtney Harris, Mallory Mullins, & Nicholas Arruebarrena</p>
+		</div>
+
+        <!-- connect html to js files -->
+		<script src="scripts/Logic.js"></script>
+        <script src="scripts/View.js"></script>
+        <script src="scripts/Controllers.js"></script>
+		<script src="scripts/sidebar.js"></script>
+    </body>
+</html>
